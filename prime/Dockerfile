@@ -1,4 +1,4 @@
-From gcc:4.9
+From scratch
 COPY prime /app/prime
 WORKDIR /app
 ENTRYPOINT ["/app/prime"]
