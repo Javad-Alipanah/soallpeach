@@ -25,9 +25,6 @@ int main(int argc, char** argv) {
 	}
 
 	while(fscanf(file, "%d", &num)) {
-		if (fgetc(file) == EOF)
-			break;
-
 		if (num == 1 || num == 0) {
 			printf("0\n");
 			continue;
@@ -43,6 +40,9 @@ int main(int argc, char** argv) {
 			}
 		}
 		printf("%d\n", is_prime);
+
+		if (fgetc(file) == EOF)
+			break;
 	}
 	fclose(file);
 	return 0;
